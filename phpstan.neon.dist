@@ -2,16 +2,18 @@ parameters:
   level: 8
   paths:
     - DependencyInjection
+    - Envelope
+    - Exception
     - Message
     - Tests
   inferPrivatePropertyTypeFromConstructor: true
-#  ignoreErrors:
-#    # Test methods with intentionally no return type
-#    -
-#      message: '#::test.+\(\) has no return typehint specified#'
-#      path: 'Tests'
-#
-#    # Return type of 'array' of test data providers
-#    -
-#      message: '#DataProvider\(\) return type has no value type specified in iterable type array#'
-#      path: 'Tests'
+  ignoreErrors:
+    # Test methods with intentionally no return type
+    -
+      message: '#::test.+\(\) has no return typehint specified#'
+      path: 'Tests'
+
+    # Return type of 'array' of test data providers
+    -
+      message: '#DataProvider\(\) return type has no value type specified in iterable type array#'
+      path: 'Tests'

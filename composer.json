@@ -16,7 +16,8 @@
         "ext-json": "*",
         "symfony/config": "^5.2",
         "symfony/dependency-injection": "^5.2",
-        "symfony/http-kernel": "^5.2"
+        "symfony/http-kernel": "^5.2",
+        "symfony/messenger": "^5.2"
     },
     "autoload": {
         "psr-4": {
