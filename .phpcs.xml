@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<ruleset name="Default">
+    <file>Tests</file>
+
+    <arg name="colors"/>
+    <arg name="extensions" value="php"/>
+
+    <rule ref="PSR12"/>
+</ruleset>
