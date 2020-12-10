@@ -2,6 +2,7 @@ parameters:
   level: 8
   paths:
     - DependencyInjection
+    - Message
     - Tests
   inferPrivatePropertyTypeFromConstructor: true
 #  ignoreErrors:
