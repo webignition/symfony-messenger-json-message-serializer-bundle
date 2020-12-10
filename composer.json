@@ -1,0 +1,63 @@
+{
+    "name": "webignition/symfony-messenger-json-message-serializer-bundle",
+    "type": "symfony-bundle",
+    "description": "",
+    "keywords": [],
+    "homepage": "https://github.com/webignition/symfony-messenger-json-message-serializer-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jon Cram",
+            "email": "webignition@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "ext-json": "*",
+        "symfony/config": "^5.2",
+        "symfony/dependency-injection": "^5.2",
+        "symfony/http-kernel": "^5.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "webignition\\JsonMessageSerializerBundle\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "webignition\\JsonMessageSerializerBundle\\Tests\\": ""
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.4",
+        "phpstan/extension-installer": "^1.0",
+        "phpstan/phpstan": "^0.12.58",
+        "phpstan/phpstan-mockery": "^0.12.7",
+        "phpstan/phpstan-phpunit": "^0.12.16",
+        "phpstan/phpstan-symfony": "^0.12.11",
+        "phpunit/phpunit": "^9.4",
+        "squizlabs/php_codesniffer": "^3.5",
+        "symplify/easy-coding-standard": "^8.3"
+    },
+    "scripts": {
+        "cs-ecs": "./vendor/bin/ecs check --ansi --no-progress-bar --config ecs.php",
+        "cs-phpcs": "./vendor/bin/phpcs",
+        "cs": [
+            "@cs-ecs",
+            "@cs-phpcs"
+        ],
+        "static-analysis": "./vendor/bin/phpstan analyse --ansi",
+        "test": "./vendor/bin/phpunit --colors=always",
+        "ci": [
+            "@cs",
+            "@static-analysis",
+            "@test"
+        ]
+    }
+}
