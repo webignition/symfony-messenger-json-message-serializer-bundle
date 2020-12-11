@@ -5,6 +5,7 @@ parameters:
     - Envelope
     - Exception
     - Message
+    - Services
     - Tests
   inferPrivatePropertyTypeFromConstructor: true
   ignoreErrors:

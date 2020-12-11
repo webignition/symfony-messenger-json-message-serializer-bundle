@@ -1,0 +1,12 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: true
+
+  webignition\JsonMessageSerializerBundle\Services\MessageFactory:
+    arguments:
+      $typeToMessageClassMap:
+        'test-boolean-message': 'webignition\JsonMessageSerializerBundle\Tests\Impl\Message\TestBooleanMessage'
+        'test-integer-message': 'webignition\JsonMessageSerializerBundle\Tests\Impl\Message\TestIntegerMessage'
+        'test-string-message': 'webignition\JsonMessageSerializerBundle\Tests\Impl\Message\TestStringMessage'
