@@ -9,9 +9,7 @@ use webignition\JsonMessageSerializerBundle\Exception\UnknownMessageTypeExceptio
 use webignition\JsonMessageSerializerBundle\Message\JsonSerializableMessageInterface;
 use webignition\JsonMessageSerializerBundle\Services\MessageFactory;
 use webignition\JsonMessageSerializerBundle\Tests\DataProvider\MessageFactoryDataProviderTrait;
-use webignition\JsonMessageSerializerBundle\Tests\Impl\Message\TestBooleanMessage;
-use webignition\JsonMessageSerializerBundle\Tests\Impl\Message\TestIntegerMessage;
-use webignition\JsonMessageSerializerBundle\Tests\Impl\Message\TestStringMessage;
+use webignition\JsonMessageSerializerBundle\Tests\Services\MessageFactoryFactory;
 
 class MessageFactoryTest extends TestCase
 {
@@ -23,11 +21,7 @@ class MessageFactoryTest extends TestCase
     {
         parent::setUp();
 
-        $this->factory = new MessageFactory([
-            TestBooleanMessage::TYPE => TestBooleanMessage::class,
-            TestIntegerMessage::TYPE => TestIntegerMessage::class,
-            TestStringMessage::TYPE => TestStringMessage::class,
-        ]);
+        $this->factory = MessageFactoryFactory::create();
     }
 
     /**
