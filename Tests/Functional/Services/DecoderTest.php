@@ -6,12 +6,10 @@ namespace webignition\JsonMessageSerializerBundle\Tests\Functional\Services;
 
 use webignition\JsonMessageSerializerBundle\Services\Decoder;
 use webignition\JsonMessageSerializerBundle\Tests\AbstractDecoderTest;
-use webignition\JsonMessageSerializerBundle\Tests\DataProvider\DecoderDataProviderTrait;
 use webignition\JsonMessageSerializerBundle\Tests\Functional\FunctionalTestContainerSetupTrait;
 
 class DecoderTest extends AbstractDecoderTest
 {
-    use DecoderDataProviderTrait;
     use FunctionalTestContainerSetupTrait;
 
     private Decoder $decoder;

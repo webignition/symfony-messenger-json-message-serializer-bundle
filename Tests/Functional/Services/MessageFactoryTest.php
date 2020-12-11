@@ -6,12 +6,10 @@ namespace webignition\JsonMessageSerializerBundle\Tests\Functional\Services;
 
 use webignition\JsonMessageSerializerBundle\Services\MessageFactory;
 use webignition\JsonMessageSerializerBundle\Tests\AbstractMessageFactoryTest;
-use webignition\JsonMessageSerializerBundle\Tests\DataProvider\MessageFactoryDataProviderTrait;
 use webignition\JsonMessageSerializerBundle\Tests\Functional\FunctionalTestContainerSetupTrait;
 
 class MessageFactoryTest extends AbstractMessageFactoryTest
 {
-    use MessageFactoryDataProviderTrait;
     use FunctionalTestContainerSetupTrait;
 
     private MessageFactory $factory;
