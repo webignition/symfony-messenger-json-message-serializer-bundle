@@ -27,7 +27,7 @@ class DecoderTest extends AbstractFunctionalTest
     }
 
     /**
-     * @dataProvider decodeDataProvider
+     * @dataProvider decoderDecodeDataProvider
      *
      * @param array<mixed> $encodedEnvelope
      */

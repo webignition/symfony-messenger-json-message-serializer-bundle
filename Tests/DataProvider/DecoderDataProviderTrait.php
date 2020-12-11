@@ -12,7 +12,7 @@ use webignition\JsonMessageSerializerBundle\Tests\Impl\Message\TestStringMessage
 
 trait DecoderDataProviderTrait
 {
-    public function decodeDataProvider(): array
+    public function decoderDecodeDataProvider(): array
     {
         $booleanMessage = new TestBooleanMessage(true);
         $integerMessage = new TestIntegerMessage(7);

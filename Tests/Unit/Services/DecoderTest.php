@@ -33,7 +33,7 @@ class DecoderTest extends TestCase
     }
 
     /**
-     * @dataProvider decodeDataProvider
+     * @dataProvider decoderDecodeDataProvider
      *
      * @param array<mixed> $encodedEnvelope
      */
