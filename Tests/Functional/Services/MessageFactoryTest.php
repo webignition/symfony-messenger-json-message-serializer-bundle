@@ -4,35 +4,28 @@ declare(strict_types=1);
 
 namespace webignition\JsonMessageSerializerBundle\Tests\Functional\Services;
 
-use webignition\JsonMessageSerializerBundle\Message\JsonSerializableMessageInterface;
 use webignition\JsonMessageSerializerBundle\Services\MessageFactory;
+use webignition\JsonMessageSerializerBundle\Tests\AbstractMessageFactoryTest;
 use webignition\JsonMessageSerializerBundle\Tests\DataProvider\MessageFactoryDataProviderTrait;
-use webignition\JsonMessageSerializerBundle\Tests\Functional\AbstractFunctionalTest;
+use webignition\JsonMessageSerializerBundle\Tests\Functional\FunctionalTestContainerSetupTrait;
 
-class MessageFactoryTest extends AbstractFunctionalTest
+class MessageFactoryTest extends AbstractMessageFactoryTest
 {
     use MessageFactoryDataProviderTrait;
+    use FunctionalTestContainerSetupTrait;
 
     private MessageFactory $factory;
 
-    protected function setUp(): void
+    protected function createFactory(): MessageFactory
     {
-        parent::setUp();
+        $container = $this->createContainer();
 
-        $messageFactory = $this->container->get(MessageFactory::class);
-        self::assertInstanceOf(MessageFactory::class, $messageFactory);
-        if ($messageFactory instanceof MessageFactory) {
-            $this->factory = $messageFactory;
+        $factory = $container->get(MessageFactory::class);
+        self::assertInstanceOf(MessageFactory::class, $factory);
+        if ($factory instanceof MessageFactory) {
+            $this->factory = $factory;
         }
-    }
 
-    /**
-     * @dataProvider messageFactoryCreateDataProvider
-     *
-     * @param array<mixed> $payload
-     */
-    public function testCreate(string $type, array $payload, JsonSerializableMessageInterface $expectedMessage)
-    {
-        self::assertEquals($expectedMessage, $this->factory->create($type, $payload));
+        return $this->factory;
     }
 }
