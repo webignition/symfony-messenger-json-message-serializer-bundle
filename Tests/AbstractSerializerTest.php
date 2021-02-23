@@ -22,7 +22,7 @@ abstract class AbstractSerializerTest extends TestCase
      *
      * @param array<mixed> $expectedSerializedEnvelope
      */
-    public function testEncode(Envelope $envelope, array $expectedSerializedEnvelope)
+    public function testEncode(Envelope $envelope, array $expectedSerializedEnvelope): void
     {
         $serializer = $this->createSerializer();
 
@@ -34,7 +34,7 @@ abstract class AbstractSerializerTest extends TestCase
      *
      * @param array<mixed> $encodedEnvelope
      */
-    public function testDecode(array $encodedEnvelope, Envelope $expectedEnvelope)
+    public function testDecode(array $encodedEnvelope, Envelope $expectedEnvelope): void
     {
         $serializer = $this->createSerializer();
 
@@ -44,7 +44,7 @@ abstract class AbstractSerializerTest extends TestCase
     /**
      * @dataProvider envelopeEncodeDataProvider
      */
-    public function testEncodeDecode(Envelope $envelope)
+    public function testEncodeDecode(Envelope $envelope): void
     {
         $serializer = $this->createSerializer();
 

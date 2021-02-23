@@ -21,14 +21,14 @@ abstract class AbstractMessageFactoryTest extends TestCase
      *
      * @param array<mixed> $payload
      */
-    public function testCreate(string $type, array $payload, JsonSerializableMessageInterface $expectedMessage)
+    public function testCreate(string $type, array $payload, JsonSerializableMessageInterface $expectedMessage): void
     {
         $factory = $this->createFactory();
 
         self::assertEquals($expectedMessage, $factory->create($type, $payload));
     }
 
-    public function testCreateThrowsUnknownMessageTypeException()
+    public function testCreateThrowsUnknownMessageTypeException(): void
     {
         $factory = $this->createFactory();
 
