@@ -38,7 +38,12 @@ class JsonMessageSerializerExtension extends Extension
             return false;
         }
 
-        $kernelProjectDirectory = realpath($container->getParameter('kernel.project_dir'));
+        $kernelProjectDirectory = $container->getParameter('kernel.project_dir');
+        if (!is_string($kernelProjectDirectory)) {
+            $kernelProjectDirectory = '';
+        }
+
+        $kernelProjectDirectory = realpath($kernelProjectDirectory);
         $bundleDirectory = realpath(__DIR__ . '/..');
 
         return $kernelProjectDirectory === $bundleDirectory;
