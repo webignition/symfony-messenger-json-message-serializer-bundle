@@ -37,11 +37,11 @@
     },
     "require-dev": {
         "mockery/mockery": "^1.4",
-        "phpstan/extension-installer": "^1.0",
-        "phpstan/phpstan": "^0.12.58",
-        "phpstan/phpstan-mockery": "^0.12.7",
-        "phpstan/phpstan-phpunit": "^0.12.16",
-        "phpstan/phpstan-symfony": "^0.12.11",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan": "^0.12.78",
+        "phpstan/phpstan-mockery": "^0.12.12",
+        "phpstan/phpstan-phpunit": "^0.12.17",
+        "phpstan/phpstan-symfony": "^0.12.20",
         "phpunit/phpunit": "^9.4",
         "squizlabs/php_codesniffer": "^3.5",
         "symplify/easy-coding-standard": "^8.3"

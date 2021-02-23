@@ -8,13 +8,3 @@ parameters:
     - Services
     - Tests
   inferPrivatePropertyTypeFromConstructor: true
-  ignoreErrors:
-    # Test methods with intentionally no return type
-    -
-      message: '#::test.+\(\) has no return typehint specified#'
-      path: 'Tests'
-
-    # Return type of 'array' of test data providers
-    -
-      message: '#DataProvider\(\) return type has no value type specified in iterable type array#'
-      path: 'Tests'

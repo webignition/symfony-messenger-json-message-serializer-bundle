@@ -18,7 +18,7 @@ class SerializableEnvelopeTest extends TestCase
      *
      * @param array<mixed> $expectedSerializedEnvelope
      */
-    public function testEncode(Envelope $envelope, array $expectedSerializedEnvelope)
+    public function testEncode(Envelope $envelope, array $expectedSerializedEnvelope): void
     {
         $serializableEnvelope = (new SerializableEnvelope($envelope));
 

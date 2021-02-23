@@ -36,8 +36,10 @@ class MessageFactory
 
         if (is_string($messageClass)) {
             $messageClassInterfaces = class_implements($messageClass);
-            if (in_array(JsonSerializableMessageInterface::class, $messageClassInterfaces)) {
-                return $messageClass::createFromArray($payload);
+            if (is_array($messageClassInterfaces)) {
+                if (in_array(JsonSerializableMessageInterface::class, $messageClassInterfaces)) {
+                    return $messageClass::createFromArray($payload);
+                }
             }
         }
 

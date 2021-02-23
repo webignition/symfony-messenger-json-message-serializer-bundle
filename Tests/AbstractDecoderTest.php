@@ -20,7 +20,7 @@ abstract class AbstractDecoderTest extends TestCase
      *
      * @param array<mixed> $encodedEnvelope
      */
-    public function testDecode(array $encodedEnvelope, Envelope $expectedEnvelope)
+    public function testDecode(array $encodedEnvelope, Envelope $expectedEnvelope): void
     {
         $decoder = $this->createDecoder();
 

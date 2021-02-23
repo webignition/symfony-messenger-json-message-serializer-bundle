@@ -12,6 +12,9 @@ use webignition\JsonMessageSerializerBundle\Tests\Impl\Message\TestStringMessage
 
 trait EnvelopeDataProviderTrait
 {
+    /**
+     * @return array[]
+     */
     public function envelopeEncodeDataProvider(): array
     {
         $stringMessage = new TestStringMessage('string value');

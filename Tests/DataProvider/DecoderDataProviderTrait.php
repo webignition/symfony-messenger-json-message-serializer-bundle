@@ -12,6 +12,9 @@ use webignition\JsonMessageSerializerBundle\Tests\Impl\Message\TestStringMessage
 
 trait DecoderDataProviderTrait
 {
+    /**
+     * @return array[]
+     */
     public function decoderDecodeDataProvider(): array
     {
         $booleanMessage = new TestBooleanMessage(true);

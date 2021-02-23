@@ -10,6 +10,9 @@ use webignition\JsonMessageSerializerBundle\Tests\Impl\Message\TestStringMessage
 
 trait MessageFactoryDataProviderTrait
 {
+    /**
+     * @return array[]
+     */
     public function messageFactoryCreateDataProvider(): array
     {
         return [
